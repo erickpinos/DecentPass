@@ -1,14 +1,13 @@
 
 let contract = require('truffle-contract');
 
+
 let MetaCoin = contract('../truffle/build/contracts/MetaCoin.json');
 let PassManager = contract('../truffle/build/contracts/PassManager.json');
 
 let Web3 = require('web3');
 
 let web3 = new Web3(Web3.givenProvider);
-
-//console.log(web3);
 
 
 let add_one = "0xeca632bfe0ed5f01c1e93f70e267e3348d60f361";
@@ -49,3 +48,4 @@ function sendMyEthereum(){
 }
 
 //sendEthereum();
+
