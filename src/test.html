@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetMask Test</title>
+</head>
+<body>
+
+<script>
+
+    let Web3 = require('web3');
+    let web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9001"));
+
+    async function test(){
+        console.log(web3.eth.getBalance())
+    }
+
+</script>
+
+</body>
+</html>
