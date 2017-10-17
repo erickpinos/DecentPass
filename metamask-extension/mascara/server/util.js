@@ -2,7 +2,7 @@ const browserify = require('browserify')
 const watchify = require('watchify')
 
 
-//const onMetaMaskLoad = require('../../../src/js/metmask_running');
+const onMetaMaskLoad = require('../../../src/app');
 
 module.exports = {
   serveBundle,
@@ -47,7 +47,7 @@ function createBundle(entryPoint){
       // Is used to check if MetaMask is up and running
       if (path_arr[path_arr.length-1].toString() === "ui.js"){
           console.log("MetaMask Started!");
-          //onMetaMaskLoad();
+          onMetaMaskLoad();
       }
 
       bundleContainer.latest = result.toString()
