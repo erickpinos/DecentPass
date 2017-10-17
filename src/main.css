@@ -1,0 +1,34 @@
+#start_meta{
+    height: 200px;
+    width: 50%;
+    background-color: powderblue;
+    z-index: 1000;
+}
+
+#metamask{
+    display: none;
+    width: 357px;
+    height: 500px;
+    background-color: #0A5448;
+    z-index: 1002;
+    overflow: auto;
+    position: absolute;
+    top: 15%;
+    border: 0;
+    max-height: 100%;
+}
+
+.col{
+    height: 100px;
+}
+
+#nav_title_text{
+    font-size: 20px;
+    top: -10px;
+}
+
+
+#color_nav_header{
+    height: 40px;
+}
+

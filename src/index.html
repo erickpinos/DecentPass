@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+      <script src="metmask.js"></script>
+    <script src="http://localhost:9001/metamascara.js"></script>
+
+      <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+      <script type="text/javascript" src="js/materialize.js"></script>
+  </head>
+  <body>
+
+          <nav id="color_nav_header" class="navbar-color">
+                  <a id="nav_title_text" class="brand-logo">DecentPass</a>
+          </nav>
+
+
+  <div class="container">
+  <div class="row" style="background-color: #880e4f">
+
+      <div class="col s3" style="background-color: #0D47A1">
+          <!-- Grey navigation panel -->
+      </div>
+
+      <div class="col s9" style="background-color: #1B5E20">
+          <!-- Teal page content  -->
+      </div>
+
+  </div>
+
+  <a id="start_meta" class="waves-effect waves-light btn modal-trigger" href="#metamask"> Start MetaMask </a>
+<iframe id="metamask" class="modal">
+
+
+
+</iframe>
+
+
+    <script>
+      // You can also require other files to run in this process
+
+
+      require('../renderer.js');
+
+      require('./app.js');
+
+
+      document.getElementById("start_meta").addEventListener("click", function(){
+          console.log("CLICL@");
+          let iframe = document.getElementById("metamask");
+          iframe.src = "http://localhost:9001";
+           // Used to reload MetMask again. P.S. MetaMask doesn't show up on the first time
+          iframe.style.display = "block";
+          iframe.src = "http://localhost:9001";
+          //document.body.appendChild(iframe);
+      });
+
+
+
+    </script>
+  </div>
+  </body>
+</html>
