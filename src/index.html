@@ -13,55 +13,48 @@
   </head>
   <body>
 
-          <nav id="color_nav_header" class="navbar-color">
-                  <a id="nav_title_text" class="brand-logo">DecentPass</a>
-          </nav>
+      <nav id="color_nav_header" class="navbar-color">
+              <a id="nav_title_text" class="brand-logo">DecentPass</a>
+      </nav>
 
 
-  <div class="container">
-  <div class="row" style="background-color: #880e4f">
+      <div class="container">
+      <div class="row" style="background-color: #880e4f">
 
-      <div class="col s3" style="background-color: #0D47A1">
-          <!-- Grey navigation panel -->
+          <div class="col s3" style="background-color: #0D47A1">
+              <!-- Grey navigation panel -->
+          </div>
+
+          <div class="col s9" style="background-color: #1B5E20">
+              <!-- Teal page content  -->
+          </div>
+
       </div>
 
-      <div class="col s9" style="background-color: #1B5E20">
-          <!-- Teal page content  -->
+      <a id="start_meta" class="waves-effect waves-light btn modal-trigger" href="#metamask"> Start MetaMask </a>
+
+    <iframe id="metamask" class="modal">
+    </iframe>
+
+
+        <script>
+          require('../renderer.js');
+
+
+          require('./js/app.js');
+
+
+          document.getElementById("start_meta").addEventListener("click", function(){
+              console.log("Opening MetaMask...");
+
+              let iframe = document.getElementById("metamask");
+              iframe.src = "http://localhost:9001";
+               // Used to reload MetMask again. P.S. MetaMask doesn't show up on the first time
+              iframe.style.display = "block";
+          });
+
+
+        </script>
       </div>
-
-  </div>
-
-  <a id="start_meta" class="waves-effect waves-light btn modal-trigger" href="#metamask"> Start MetaMask </a>
-<iframe id="metamask" class="modal">
-
-
-
-</iframe>
-
-
-    <script>
-      // You can also require other files to run in this process
-
-
-      require('../renderer.js');
-
-
-      require('./js/app.js');
-
-
-      document.getElementById("start_meta").addEventListener("click", function(){
-          console.log("CLICL@");
-          let iframe = document.getElementById("metamask");
-          iframe.src = "http://localhost:9001";
-           // Used to reload MetMask again. P.S. MetaMask doesn't show up on the first time
-          iframe.style.display = "block";
-          iframe.src = "http://localhost:9001";
-          //document.body.appendChild(iframe);
-      });
-
-
-
-    </script>
-  </div>
   </body>
 </html>
